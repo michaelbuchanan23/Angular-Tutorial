@@ -1,0 +1,27 @@
+<app-cv-ads></app-cv-ads>
+
+<div>
+  <h5>
+  	Resume of {{ name }}  	<br />
+  	{{ address }}			<br />
+  	{{ email }}				<br />
+  	{{ phone }}
+  </h5>
+
+ Skills:
+ <ul>
+    <li *ngFor="let skill of skills">{{ skill }}
+</ul>
+
+Experience
+<table class = "table table-sm">
+	<th>Company</th><th>Position</th><th>Start/End</th>
+	<tr *ngFor="let experience of experiences">
+		<td>{{experience.company}}</td>
+		<td>{{experience.position}}</td>
+		<td>{{experience.startEnd}}</td>
+	</tr>
+</table>
+
+</div>
+<app-cv-extended></app-cv-extended>

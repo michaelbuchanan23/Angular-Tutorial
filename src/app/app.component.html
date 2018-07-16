@@ -1,5 +1,27 @@
-<h1>{{title}}</h1>
-<p>
-    <button (click)="onclick()">Click me!</button>
-    <label>{{sometext}}</label>
-</p>
+<app-resume-cv></app-resume-cv>
+
+<br />
+<hr>
+<br />
+
+<div>
+  <h1> {{ title }}</h1>
+
+  <input type="text" [(ngModel)]="name" placeholder="Name">
+  <input type="number" [(ngModel)] ="nbr" placeholder="Nbr">
+  <input type="number" [(ngModel)]="amount" placeholder="Amount">
+  <button (click)="add()" class="btn btn-primary">Add</button>
+
+  <p></p>
+
+  <table class="table table-sm">
+    <tr><th>Name</th><th>Number</th><th>Amount</th></tr>
+    <tr *ngFor="let n of names">
+      <td>{{n.name}}</td>
+      <td>{{n.nbr}}</td>
+      <td>{{n.amt}}</td>
+    </tr>
+</table>
+</div>
+
+
