@@ -1,0 +1,25 @@
+<!-- <nav>
+	<ul class="list-group">
+		<menu-item></menu-item>
+		<li *ngFor="let menu of menudata" class ="list-group-item">
+			<a href="{{menu.href}}">{{menu.display}}</a>
+		</li>
+	</ul>
+</nav>
+ -->
+
+ <nav>
+	<ul>
+		<menu-item *ngFor="let menuitem of menudata" [menu]="menuitem"></menu-item>
+	</ul>
+</nav>
+
+<br />
+
+<!-- changes the format of the table via the change function-->
+<button (click)="change()">Change the table style</button>
+<table [ngClass]="tableclass">
+	<tr><td>abc</td><td>def</td></tr>
+</table>
+
+<br />

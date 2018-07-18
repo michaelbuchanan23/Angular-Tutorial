@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './resume-cv.component.html',
   styleUrls: ['./resume-cv.component.css']
 })
+
 export class ResumeCvComponent implements OnInit {
 
 	name: string = "Michael Buchanan";
